@@ -10,10 +10,14 @@
 		1A8A48A62AF9304C002A578E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8A48A52AF9304C002A578E /* AppDelegate.swift */; };
 		1A8A48A82AF9304C002A578E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8A48A72AF9304C002A578E /* SceneDelegate.swift */; };
 		1A8A48AA2AF9304C002A578E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8A48A92AF9304C002A578E /* ViewController.swift */; };
-		1A8A48AD2AF9304C002A578E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A8A48AB2AF9304C002A578E /* Main.storyboard */; };
 		1A8A48B02AF9304C002A578E /* PokemonApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1A8A48AE2AF9304C002A578E /* PokemonApp.xcdatamodeld */; };
 		1A8A48B22AF9304E002A578E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A8A48B12AF9304E002A578E /* Assets.xcassets */; };
 		1A8A48B52AF9304E002A578E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A8A48B32AF9304E002A578E /* LaunchScreen.storyboard */; };
+		1A8A48C12AF937B8002A578E /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8A48C02AF937B8002A578E /* Pokemon.swift */; };
+		1A8A48C32AF96263002A578E /* PokemonTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8A48C22AF96263002A578E /* PokemonTableViewCell.swift */; };
+		1A8A48C62AF963C6002A578E /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 1A8A48C52AF963C6002A578E /* SDWebImage */; };
+		1A8A48C82AF963C6002A578E /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 1A8A48C72AF963C6002A578E /* SDWebImageMapKit */; };
+		1A8A48F12AF97164002A578E /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8A48F02AF97164002A578E /* APICaller.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,11 +25,13 @@
 		1A8A48A52AF9304C002A578E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1A8A48A72AF9304C002A578E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		1A8A48A92AF9304C002A578E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		1A8A48AC2AF9304C002A578E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1A8A48AF2AF9304C002A578E /* PokemonApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PokemonApp.xcdatamodel; sourceTree = "<group>"; };
 		1A8A48B12AF9304E002A578E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1A8A48B42AF9304E002A578E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1A8A48B62AF9304E002A578E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1A8A48C02AF937B8002A578E /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
+		1A8A48C22AF96263002A578E /* PokemonTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonTableViewCell.swift; sourceTree = "<group>"; };
+		1A8A48F02AF97164002A578E /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +39,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A8A48C82AF963C6002A578E /* SDWebImageMapKit in Frameworks */,
+				1A8A48C62AF963C6002A578E /* SDWebImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,16 +66,50 @@
 		1A8A48A42AF9304C002A578E /* PokemonApp */ = {
 			isa = PBXGroup;
 			children = (
-				1A8A48A52AF9304C002A578E /* AppDelegate.swift */,
-				1A8A48A72AF9304C002A578E /* SceneDelegate.swift */,
-				1A8A48A92AF9304C002A578E /* ViewController.swift */,
-				1A8A48AB2AF9304C002A578E /* Main.storyboard */,
+				1A8A48F02AF97164002A578E /* APICaller.swift */,
+				1A8A48BF2AF9377F002A578E /* Model */,
+				1A8A48BC2AF930B1002A578E /* AppDelegate */,
+				1A8A48BD2AF930D6002A578E /* Controller */,
+				1A8A48BE2AF93100002A578E /* View */,
 				1A8A48B12AF9304E002A578E /* Assets.xcassets */,
-				1A8A48B32AF9304E002A578E /* LaunchScreen.storyboard */,
 				1A8A48B62AF9304E002A578E /* Info.plist */,
 				1A8A48AE2AF9304C002A578E /* PokemonApp.xcdatamodeld */,
 			);
 			path = PokemonApp;
+			sourceTree = "<group>";
+		};
+		1A8A48BC2AF930B1002A578E /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				1A8A48A52AF9304C002A578E /* AppDelegate.swift */,
+				1A8A48A72AF9304C002A578E /* SceneDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		1A8A48BD2AF930D6002A578E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1A8A48A92AF9304C002A578E /* ViewController.swift */,
+				1A8A48C22AF96263002A578E /* PokemonTableViewCell.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		1A8A48BE2AF93100002A578E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1A8A48B32AF9304E002A578E /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		1A8A48BF2AF9377F002A578E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1A8A48C02AF937B8002A578E /* Pokemon.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -86,6 +128,10 @@
 			dependencies = (
 			);
 			name = PokemonApp;
+			packageProductDependencies = (
+				1A8A48C52AF963C6002A578E /* SDWebImage */,
+				1A8A48C72AF963C6002A578E /* SDWebImageMapKit */,
+			);
 			productName = PokemonApp;
 			productReference = 1A8A48A22AF9304C002A578E /* PokemonApp.app */;
 			productType = "com.apple.product-type.application";
@@ -114,6 +160,9 @@
 				Base,
 			);
 			mainGroup = 1A8A48992AF9304C002A578E;
+			packageReferences = (
+				1A8A48C42AF963C6002A578E /* XCRemoteSwiftPackageReference "SDWebImage" */,
+			);
 			productRefGroup = 1A8A48A32AF9304C002A578E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -130,7 +179,6 @@
 			files = (
 				1A8A48B52AF9304E002A578E /* LaunchScreen.storyboard in Resources */,
 				1A8A48B22AF9304E002A578E /* Assets.xcassets in Resources */,
-				1A8A48AD2AF9304C002A578E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,8 +189,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A8A48C12AF937B8002A578E /* Pokemon.swift in Sources */,
 				1A8A48AA2AF9304C002A578E /* ViewController.swift in Sources */,
+				1A8A48F12AF97164002A578E /* APICaller.swift in Sources */,
 				1A8A48B02AF9304C002A578E /* PokemonApp.xcdatamodeld in Sources */,
+				1A8A48C32AF96263002A578E /* PokemonTableViewCell.swift in Sources */,
 				1A8A48A62AF9304C002A578E /* AppDelegate.swift in Sources */,
 				1A8A48A82AF9304C002A578E /* SceneDelegate.swift in Sources */,
 			);
@@ -151,14 +202,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		1A8A48AB2AF9304C002A578E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1A8A48AC2AF9304C002A578E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		1A8A48B32AF9304E002A578E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -301,7 +344,6 @@
 				INFOPLIST_FILE = PokemonApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -329,7 +371,6 @@
 				INFOPLIST_FILE = PokemonApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -367,6 +408,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1A8A48C42AF963C6002A578E /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.18.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1A8A48C52AF963C6002A578E /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1A8A48C42AF963C6002A578E /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		1A8A48C72AF963C6002A578E /* SDWebImageMapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1A8A48C42AF963C6002A578E /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImageMapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		1A8A48AE2AF9304C002A578E /* PokemonApp.xcdatamodeld */ = {
