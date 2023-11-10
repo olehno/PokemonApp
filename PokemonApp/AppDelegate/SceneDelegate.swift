@@ -14,10 +14,20 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
-        window = UIWindow(frame: windowScene.coordinateSpace.bounds)
-        window?.windowScene = windowScene
-        window?.rootViewController = ViewController()
-        window?.makeKeyAndVisible()
+                
+                /// 2. Create a new UIWindow using the windowScene constructor which takes in a window scene.
+                let window = UIWindow(windowScene: windowScene)
+                
+                /// 3. Create a view hierarchy programmatically
+                let viewController = ViewController()
+                let navigation = UINavigationController(rootViewController: viewController)
+                
+                /// 4. Set the root view controller of the window with your view controller
+                window.rootViewController = navigation
+                
+                /// 5. Set the window and call makeKeyAndVisible()
+                self.window = window
+                window.makeKeyAndVisible()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

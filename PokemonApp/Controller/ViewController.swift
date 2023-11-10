@@ -97,4 +97,16 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
         return 120
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let poke = pokey[indexPath.row]
+        let vc = DetailViewController()
+        vc.configure(image: poke.imageURL, name: poke.name, subt: poke.subtype ?? "", hp: poke.hp ?? "", evo: poke.evolvesFrom ?? "")
+
+        if let navigationController = navigationController {
+            navigationController.pushViewController(vc, animated: true)
+        } else {
+            print("No navigation controller found")
+        }
+    }
+    
 }
